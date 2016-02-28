@@ -13,11 +13,20 @@ namespace ElQuecus
         {
             List<TagLib.File> FileList = new List<File>();
 
-            foreach (var file in await FileSearch.GetFilePaths(path))
+            try
             {
+                foreach (var file in await FileSearch.GetFilePaths(path))
+                {
 
-                FileList.Add(File.Create(file));
+                    FileList.Add(File.Create(file));
+                }
             }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error processing file: {0}", e);
+            }
+
+
 
             return FileList;
         }

@@ -21,7 +21,7 @@ namespace ElQuecus
         public static async Task<List<string>> GetFilePaths(string path)
         {
             if(!checkPath.IsMatch(path)) throw new ArgumentException();
-            Task t = new Task(() => GetFiles(path));
+            var t = new Task(() => GetFiles(path));
             t.Start();
             await t;
             return _filePaths;
@@ -33,9 +33,17 @@ namespace ElQuecus
             {
                 _filePaths.Add(file);
             }
-            foreach (var directory in Directory.GetDirectories(path))
+
+            try
             {
-                GetFiles(directory);
+                foreach (var directory in Directory.GetDirectories(path))
+                {
+                    GetFiles(directory);
+                }
+            }
+            catch (UnauthorizedAccessException)
+            {
+                //ignored
             }
         }
     }
