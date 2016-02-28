@@ -12,7 +12,7 @@ namespace ElQuecus
     {
         //поле для хранения того что будем возвращать
         private static List<string> _filePaths = new List<string>();
-        private static readonly Regex checkPath = new Regex(@"^[A-Z]+:");
+        private static readonly Regex checkPath = new Regex(@"^[A-Z]+:+\\");
         private static string[] _audioExtensions =
         {
             ".mp3", ".flac"
