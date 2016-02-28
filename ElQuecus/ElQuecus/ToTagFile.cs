@@ -7,7 +7,7 @@ using TagLib;
 
 namespace ElQuecus
 {
-    public static class ToTagFile
+    internal static class ToTagFile
     {
         public static async Task<List<TagLib.File>> GetFiles(string path)
         {

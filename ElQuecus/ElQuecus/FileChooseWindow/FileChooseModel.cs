@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElQuecus.FileChooseWindow
 {
-    class FileChooseModel
+    internal class FileChooseModel
     {
         public static void Method(string path)
         {

@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 
 namespace ElQuecus
 {
-    public static class FileSearch
+    internal static class FileSearch
     {
         //поле для хранения того что будем возвращать
         private static List<string> _filePaths = new List<string>();
