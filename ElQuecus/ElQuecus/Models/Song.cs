@@ -11,6 +11,8 @@ namespace ElQuecus.Models
   
     internal class Song
     {
+        public string Path { get; set; }
+
         public string ArtistName { get; set; }
 
         public string Title { get; set; }
@@ -21,11 +23,12 @@ namespace ElQuecus.Models
 
         public string Length { get; set; }
 
-        public Song(string artistName, string title, string length)
+        public Song(string artistName, string title, string length, string path)
         {
             ArtistName = artistName;
             Title = title;
             Length = length;
+            Path = path;
         }
     }
 }
