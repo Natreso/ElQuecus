@@ -30,8 +30,9 @@ namespace ElQuecus
             return FileList;
         }
 
-        public static void Converter(List<File> FileList)
+        public static List<Song> Converter(List<File> FileList)
         {
+            List<Song> TracksList = new List<Song>();
             try
             {
                 foreach (var file in FileList)
@@ -48,6 +49,8 @@ namespace ElQuecus
                 
                 //ignored
             }
+
+            return TracksList;
         }
     }
 }
