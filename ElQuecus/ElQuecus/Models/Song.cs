@@ -13,18 +13,18 @@ namespace ElQuecus.Models
     {
         public string ArtistName { get; set; }
 
-        public string SongName { get; set; }
+        public string Title { get; set; }
 
         public string Album { get; set; }
 
         public int Year { get; set; }
 
-        public int Length { get; set; }
+        public string Length { get; set; }
 
-        public Song(string artistName, string songName, int length)
+        public Song(string artistName, string title, string length)
         {
             ArtistName = artistName;
-            SongName = songName;
+            Title = title;
             Length = length;
         }
     }
