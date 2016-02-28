@@ -15,6 +15,7 @@ namespace ElQuecus
 
             foreach (var file in await FileSearch.GetFilePaths(path))
             {
+
                 FileList.Add(File.Create(file));
             }
 
