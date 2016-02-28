@@ -10,9 +10,9 @@ namespace ElQuecus
     public static class FileSearch
     {
         //поле для хранения того что будем возвращать
-        private static List<string> FilePaths = new List<string>();
+        private static List<string> _filePaths = new List<string>();
 
-        private static string[] AudioExtensions = new string[]
+        private static string[] _audioExtensions =
         {
             ".mp3", ".flac"
         };
@@ -22,22 +22,18 @@ namespace ElQuecus
             Task t = new Task(() => GetFiles(path));
             t.Start();
             await t;
-            return FilePaths;
+            return _filePaths;
         }
 
         private static void GetFiles(string path)
         {
-            //берем файл
+            foreach (var file in Directory.GetFiles(path).Where(file => _audioExtensions.Contains(Path.GetExtension(file))))
+            {
+                _filePaths.Add(file);
+            }
             foreach (var directory in Directory.GetDirectories(path))
             {
-                foreach (var file in Directory.GetFiles(directory))
-                {
-                    if (AudioExtensions.Contains(Path.GetExtension(file)))
-                    FilePaths.Add(file);
-                }
-                //идём по подпапкам
                 GetFiles(directory);
-
             }
         }
     }
