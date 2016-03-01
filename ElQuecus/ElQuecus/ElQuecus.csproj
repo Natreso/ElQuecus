@@ -78,9 +78,9 @@
     <Compile Include="DB\Context.cs" />
     <Compile Include="EchoNestService.cs" />
     <Compile Include="FileChooseWindow\FileChooseModel.cs" />
-    <Compile Include="Models\DataBase\Album.cs" />
-    <Compile Include="Models\DataBase\Artist.cs" />
-    <Compile Include="Models\DataBase\Track.cs" />
+    <Compile Include="Models\DataBase\Music\Album.cs" />
+    <Compile Include="Models\DataBase\Music\Artist.cs" />
+    <Compile Include="Models\DataBase\Music\Track.cs" />
     <Compile Include="Models\Song.cs" />
     <Compile Include="Models\WebModels\EchoNestArtistBio.cs" />
     <Compile Include="Models\WebModels\EchoNestArtistTerms.cs" />
