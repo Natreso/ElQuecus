@@ -9,7 +9,6 @@ namespace ElQuecus.Models.DataBase
 {
     class Track
     {
-        [Key]
         public int TrackId { get; set; }
 
         public string TrackName { get; set; }

@@ -9,11 +9,10 @@ namespace ElQuecus.Models.DataBase
 {
     class Artist
     {
-        [Key]
         public int ArtistId { get; set; }
 
         public string ArtistName { get; set; }
 
-        public string ArtistAlbum { get; set; }
+        public List<Album> ArtistAlbum { get; set; }
     }
 }

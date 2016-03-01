@@ -9,11 +9,10 @@ namespace ElQuecus.Models.DataBase
 {
     class Album
     {
-        [Key]
         public int AlbumId { get; set; }
 
         public string AlbumName { get; set; }
 
-        public string AlbumTrack { get; set; }
+        public List<Track> AlbumTrack { get; set; }
     }
 }
