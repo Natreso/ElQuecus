@@ -80,7 +80,7 @@
     <Compile Include="Models\Song.cs" />
     <Compile Include="Models\WebModels\EchoNestArtistBio.cs" />
     <Compile Include="Models\WebModels\EchoNestArtistTerms.cs" />
-    <Compile Include="ToTagFile.cs" />
+    <Compile Include="PathToSongListConverter.cs" />
     <Page Include="FileChooseWindow\FileChooseWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

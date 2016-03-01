@@ -60,6 +60,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="FileSearchTest.cs" />
+    <Compile Include="PathToSongListConverterTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

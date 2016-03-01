@@ -14,11 +14,11 @@ namespace ElQuecus.Test
         {
             var _checkList = new List<string>()
             {
-                @"C:\Users\DarkS\Source\Repos\ElQuecus\ElQuecus\ElQuecus.Test\Hollywood Undead- Does Everybody In the World Have To Die.mp3",
-                @"C:\Users\DarkS\Source\Repos\ElQuecus\ElQuecus\ElQuecus.Test\Hollywood Undead - Disease.mp3",
-                @"C:\Users\DarkS\Source\Repos\ElQuecus\ElQuecus\ElQuecus.Test\Hollywood Undead- Party By Myself.mp3"
+                @"C:\Users\DarkS\Source\Repos\ElQuecus\ElQuecus\ElQuecus.Test\TestMusic\Hollywood Undead- Does Everybody In the World Have To Die.mp3",
+                @"C:\Users\DarkS\Source\Repos\ElQuecus\ElQuecus\ElQuecus.Test\TestMusic\Hollywood Undead - Disease.mp3",
+                @"C:\Users\DarkS\Source\Repos\ElQuecus\ElQuecus\ElQuecus.Test\TestMusic\Hollywood Undead- Party By Myself.mp3"
             };
-            const string checkedPath = @"C:\Users\DarkS\Source\Repos\ElQuecus\ElQuecus\ElQuecus.Test";
+            const string checkedPath = @"C:\Users\DarkS\Source\Repos\ElQuecus\ElQuecus\ElQuecus.Test\TestMusic";
             var test = FileSearch.GetFilePaths(checkedPath).Result;
             Assert.AreEqual(_checkList.Except(test).Count(), 0);
         }

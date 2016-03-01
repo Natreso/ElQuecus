@@ -11,7 +11,7 @@ namespace ElQuecus.FileChooseWindow
     {
         public static async Task<List<Song>> GetSongList(string path)
         {
-            return await ToTagFile.GetFiles(path);
+            return await PathToSongListConverter.GetFiles(path);
         } 
     }
 }
