@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
 
 namespace ElQuecus.Models.DataBase
 {
@@ -13,6 +12,6 @@ namespace ElQuecus.Models.DataBase
 
         public string ArtistName { get; set; }
 
-        public List<Album> ArtistAlbum { get; set; }
+        public virtual List<Album> ArtistAlbum { get; set; }
     }
 }
