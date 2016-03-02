@@ -26,11 +26,12 @@ namespace ElQuecus.Models
 
         public string Duration { get; set; }
 
-        public Song(string artistName, string title, string duration, string path)
+        public Song(string artistName, string title, string duration, string album, string path)
         {
             ArtistName = artistName;
             Title = title;
             Duration = duration;
+            Album = album;
             Path = path;
         }
        

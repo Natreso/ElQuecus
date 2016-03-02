@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Dynamic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace ElQuecus
                         tags.Tag.FirstPerformer,
                         tags.Tag.Title,
                         $"{tags.Properties.Duration.Minutes + ":" + tags.Properties.Duration.Seconds}",
+                        tags.Tag.Album,
                         file)).ToList();
         }
 
@@ -33,7 +35,7 @@ namespace ElQuecus
         if (file.Tag.FirstPerformer == null && file.Tag.Title == null
             && Math.Abs(file.Properties.Duration.TotalSeconds) <= 0)
             return null;
-        var song = new Song(file.Tag.FirstPerformer, file.Tag.Title, $"{file.Properties.Duration.Minutes + ":" + file.Properties.Duration.Seconds}", path);
+        var song = new Song(file.Tag.FirstPerformer, file.Tag.Title, $"{file.Properties.Duration.Minutes + ":" + file.Properties.Duration.Seconds}", file.Tag.Album, path);
             return song;
     }
         
