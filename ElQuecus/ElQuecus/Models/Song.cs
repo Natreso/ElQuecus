@@ -28,10 +28,10 @@ namespace ElQuecus.Models
 
         public Song(string artistName, string title, string duration, string album, string path)
         {
-            ArtistName = artistName;
+            ArtistName = artistName??"<Unknown>";
             Title = title;
             Duration = duration;
-            Album = album;
+            Album = album??"<Unknown>";
             Path = path;
         }
        
